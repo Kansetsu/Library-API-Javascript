@@ -1,0 +1,28 @@
+{
+  "name": "projeto-api",
+  "version": "1.0.0",
+  "description": "O projeto consiste em montar uma api com CRUD seguindo as regras do Clean code e boas práticas de GIT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinicius-AndradeM/Projeto-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinicius-AndradeM/Projeto-API/issues"
+  },
+  "homepage": "https://github.com/Vinicius-AndradeM/Projeto-API#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sequelize": "^6.16.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
