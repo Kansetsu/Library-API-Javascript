@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const database = require('./db')
+const database = require('../config/db')
 
 const Livro = database.define('livro', {
     id: {
@@ -12,7 +12,10 @@ const Livro = database.define('livro', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    autor: Sequelize.STRING,
+    autor:{ 
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     editora: Sequelize.STRING,
     preco: Sequelize.DECIMAL,
     descricao: Sequelize.STRING,
