@@ -2,8 +2,9 @@
   "name": "projeto-api",
   "version": "1.0.0",
   "description": "O projeto consiste em montar uma api com CRUD seguindo as regras do Clean code e boas práticas de GIT.",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
