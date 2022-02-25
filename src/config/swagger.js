@@ -1,6 +1,6 @@
 const swaggerAutogen = require('swagger-autogen')()
 
-const outputFile = './swagger_output.json'
+const outputFile = './doc/swagger_output.json'
 const controllerFile = ['./src/controller/livros.controller.js']
 
 // Responsible to gerate this informations on swagger_output.json

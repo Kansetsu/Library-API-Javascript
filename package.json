@@ -4,7 +4,7 @@
   "description": "O projeto consiste em montar uma api com CRUD seguindo as regras do Clean code e boas práticas de GIT.",
   "main": "./src/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "npm run swagger-autogen && nodemon index.js",
     "swagger-autogen": "node ./src/config/swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Vinicius-AndradeM/Projeto-API#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "express": "^4.17.3",
     "sequelize": "^6.16.2",
     "sqlite3": "^5.0.2",

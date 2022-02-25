@@ -2,6 +2,9 @@ const express = require("express")
 const controller = express.Router()
 const serviceLivro = require('../services/livro.service')
 
+// ---IMPORTANT---
+//The comments below are generated information in swagger_output.json in your creation
+
 
 controller.post('/' , (req, res)=> { 
     // #swagger.tags = ['Library']
@@ -13,7 +16,7 @@ controller.post('/' , (req, res)=> {
         required: true,
         schema: { $ref: "#/definitions/Book"}
     }*/
-    res.send(serviceLivro.create(req))
+    res.send(serviceLivro.create(req.body))
 })
 
 controller.get('/', async (req, res) => {
