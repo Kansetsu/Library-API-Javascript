@@ -1,0 +1,137 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Library API",
+    "description": "With this API you can create and safe your books",
+    "contact": {
+      "email": "vmartins@daitan.com"
+    }
+  },
+  "host": "localhost:3333",
+  "basePath": "/livros",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "post": {
+        "summary": "Create a book",
+        "description": "This route will be responsible for create a book in database",
+        "tags": [
+          "Library"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "example": "any"
+                },
+                "autor": {
+                  "example": "any"
+                },
+                "editora": {
+                  "example": "any"
+                },
+                "preco": {
+                  "example": "any"
+                },
+                "descricao": {
+                  "example": "any"
+                },
+                "categoria": {
+                  "example": "any"
+                },
+                "dataPublicacao": {
+                  "example": "any"
+                },
+                "idioma": {
+                  "example": "any"
+                },
+                "numeroDePaginas": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all books",
+        "description": "Get all books",
+        "tags": ["Library"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "summary": "Search for a book with your ID",
+        "description": "Search for some book using your ID",
+        "tags": ["Library"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a book",
+        "description": "Update data from a book using your ID",
+        "tags": ["Library"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a book",
+        "description": "Delete a book in database",
+        "tags": ["Library"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ const express = require("express")
 const controller = express.Router()
 const serviceLivro = require('../services/livro.service')
 
+
 controller.post('/' , (req, res)=> { 
     res.send(serviceLivro.create(req))
 })
@@ -15,10 +16,10 @@ controller.get('/:id', async(req, res) => {
 })
 
 controller.put('/:id', async(req, res) =>{
-    res.send(await serviceLivro.update(req.params.id, req.params))
+    res.send(await serviceLivro.update(req.params.id, req.body))
 })
 
 controller.delete('/:id', async(req, res) =>{
-    res.sendStatus(await serviceLivro.delete(req.params.id))
+    res.send(await serviceLivro.delete(req.params.id))
 })
 module.exports = controller
