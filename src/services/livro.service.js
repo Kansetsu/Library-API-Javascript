@@ -8,10 +8,13 @@ module.exports = {
 
     getByID: (id) => Livro.findByPk(id),
 
+    paginate: (pages) => Livro.findAndCountAll({ limit: pages }),
+
     update: (id, params) => {
         Livro.update(
             { ...params },
             { where: { id } })
+            return Livro.findByPk(id)
     },
 
     delete: async (id) => {
@@ -19,11 +22,5 @@ module.exports = {
         const deleted = await Livro.destroy({ where: { id } })
         return { ...object, deleted }
 
-    },
-
-    //TO DO
-    paginate: async () => {
-
     }
-
 }

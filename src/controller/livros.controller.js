@@ -34,6 +34,14 @@ controller.get('/:id', async(req, res) => {
     res.send(await serviceLivro.getByID(req.params.id))      
 })
 
+controller.get('/:pages', async(req, res) =>{
+    // #swagger.tags = ['Library']
+    // #swagger.summary = 'Get a limited number of books'
+    // #swagger.description = 'Get a limited number of books'
+    // #swagger.parameters['pages'] = { description: 'Number of elements' }    
+    res.send(await serviceLivro.paginate(req.params.pages))
+})
+
 controller.put('/:id', async(req, res) =>{
     // #swagger.tags = ['Library']
     // #swagger.summary = 'Update a book'
@@ -55,5 +63,7 @@ controller.delete('/:id', async(req, res) =>{
     // #swagger.parameters['id'] = { description: 'User ID'}    
     res.send(await serviceLivro.delete(req.params.id))
 })
+
+
 
 module.exports = controller

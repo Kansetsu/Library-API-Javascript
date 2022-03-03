@@ -131,6 +131,29 @@
           }
         }
       }
+    },
+    "/{pages}": {
+      "get": {
+        "tags": [
+          "Library"
+        ],
+        "summary": "Get a limited number of books",
+        "description": "Get a limited number of books",
+        "parameters": [
+          {
+            "name": "pages",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Number of elements"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "definitions": {
