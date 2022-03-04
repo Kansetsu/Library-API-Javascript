@@ -8,7 +8,7 @@ module.exports = {
 
     getByID: (id) => Livro.findByPk(id),
 
-    paginate: (pages) => Livro.findAndCountAll({ limit: pages }),
+    paginate: (pages) => Livro.findAll({ limit: pages }),
 
     update: (id, params) => {
         Livro.update(

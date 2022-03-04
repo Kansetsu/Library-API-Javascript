@@ -34,7 +34,7 @@ controller.get('/:id', async(req, res) => {
     res.send(await serviceLivro.getByID(req.params.id))      
 })
 
-controller.get('/:pages', async(req, res) =>{
+controller.get('/paginate/:pages', async(req, res) =>{
     // #swagger.tags = ['Library']
     // #swagger.summary = 'Get a limited number of books'
     // #swagger.description = 'Get a limited number of books'

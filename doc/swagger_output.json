@@ -132,7 +132,7 @@
         }
       }
     },
-    "/{pages}": {
+    "/paginate/{pages}": {
       "get": {
         "tags": [
           "Library"
